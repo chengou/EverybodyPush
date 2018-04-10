@@ -15,7 +15,9 @@ public class EverybodyPush {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Zeying Li made a commit.");
+        System.out.println("Hello, World!");
+        System.console();
+        System.out.println("Zeying made a commit");
     }
     
 }
