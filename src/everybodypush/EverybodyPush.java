@@ -5,6 +5,9 @@
  */
 package everybodypush;
 
+import java.util.Date;
+import java.util.Scanner;
+
 /**
  *
  * @author cfo5046
@@ -15,10 +18,35 @@ public class EverybodyPush {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        System.console();
-        System.out.println("Zeying made a commit");
-        System.out.println("Jingyi Guan");
+
+        Date d = new Date();
+        int question = 0;
+
+        System.out.println("Nice to meet you! I'm Siri. Tell me your name. ");
+        Scanner in = new Scanner(System.in);
+        String namer = in.nextLine();
+        System.out.println("Hi, " + namer + ". What do you want to know?");
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
+        while (question != -1) {
+
+            if (input.contains("time")) {
+                System.out.println("Current time：" + d.toString());
+            } else if (input.contains("age")) {
+
+                System.out.println("Let me guess... 20?");
+
+                String input2 = in.nextLine();
+                if (input2.contains("no")) {
+                    System.out.println("Tell me your age");
+                }
+                Scanner in2 = new Scanner(System.in);
+
+                if (input2.contains("yes")) {
+                    System.out.println("Bingo！");
+                }
+
+            }
+        }
     }
-    
 }
