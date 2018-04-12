@@ -23,18 +23,20 @@ public class EverybodyPush {
         int question = 0;
 
         System.out.println("Nice to meet you! I'm Siri. Tell me your name. ");
+
         Scanner in = new Scanner(System.in);
         String namer = in.nextLine();
+
         System.out.println("Hi, " + namer + ". What do you want to know?");
-        Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
         while (question != -1) {
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine();
 
             if (input.contains("time")) {
                 System.out.println("Current time：" + d.toString());
             } else if (input.contains("age")) {
 
-                System.out.println("Let me guess... 20?");
+                System.out.println("Let me guess...");
 
                 String input2 = in.nextLine();
                 if (input2.contains("no")) {
@@ -49,4 +51,5 @@ public class EverybodyPush {
             }
         }
     }
+
 }
