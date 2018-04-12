@@ -25,10 +25,12 @@ public class EverybodyPush {
         System.out.println("Nice to meet you! I'm Siri. Tell me your name. ");
         Scanner in = new Scanner(System.in);
         String namer = in.nextLine();
-        System.out.println("Hi, " + namer + ". What do you want to know?");
-        Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
+
+        System.out.println("Hi, " + namer + ".");
         while (question != -1) {
+            System.out.println("What do you want to know?");
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine();
 
             if (input.contains("time")) {
                 System.out.println("Current time：" + d.toString());
@@ -46,6 +48,8 @@ public class EverybodyPush {
                     System.out.println("Bingo！");
                 }
 
+            } else if (input.contains("bye")) {
+                System.out.println("See you!");
             }
         }
     }
